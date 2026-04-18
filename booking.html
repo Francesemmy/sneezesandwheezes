@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Book a Consultation — Sneezes & Wheezes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="booking.css" />
+<link rel="icon" type="image/svg+xml" href="daisy.svg" />
+</head>
+<body>
+
+<header class="site-nav">
+  <a href="index.html" class="brand">
+    <img src="daisy.svg" alt="" class="brand-mark" width="36" height="36" />
+    <span class="brand-name">Sneezes &amp; Wheezes</span>
+  </a>
+  <nav>
+    <a href="index.html#about">About Frances</a>
+    <a href="index.html#services">What I Treat</a>
+    <a href="index.html#gallery">Watercolours</a>
+    <a href="booking.html" class="nav-cta">Book</a>
+  </nav>
+</header>
+
+<main class="booking-page">
+  <div class="wash wash-spring"></div>
+
+  <div class="booking-inner">
+    <p class="eyebrow">Book a consultation</p>
+    <h1>Let's make a start.</h1>
+    <p class="lead">Initial consultations are <strong>75 minutes</strong> and cost <strong>£95</strong>. Follow-ups are 45 minutes at £65. Available in Henley (Thursdays &amp; Fridays) or over video. I'll confirm your slot by email within one working day.</p>
+
+    <form class="booking-form" onsubmit="handleBooking(event)">
+      <div class="row">
+        <label>
+          <span>Your name</span>
+          <input type="text" name="name" required placeholder="Jane Doe" />
+        </label>
+        <label>
+          <span>Email</span>
+          <input type="email" name="email" required placeholder="jane@example.com" />
+        </label>
+      </div>
+
+      <div class="row">
+        <label>
+          <span>Phone</span>
+          <input type="tel" name="phone" placeholder="Optional" />
+        </label>
+        <label>
+          <span>Consultation type</span>
+          <select name="type" required>
+            <option value="initial-inperson">Initial — in Henley (75 min, £95)</option>
+            <option value="initial-video">Initial — video (75 min, £95)</option>
+            <option value="followup-inperson">Follow-up — in Henley (45 min, £65)</option>
+            <option value="followup-video">Follow-up — video (45 min, £65)</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="row">
+        <label>
+          <span>Preferred week</span>
+          <input type="date" name="date" required />
+        </label>
+        <label>
+          <span>Time of day</span>
+          <select name="time" required>
+            <option>Morning (9am–12pm)</option>
+            <option>Early afternoon (12–3pm)</option>
+            <option>Late afternoon (3–6pm)</option>
+            <option>Evening (6–8pm, video only)</option>
+          </select>
+        </label>
+      </div>
+
+      <label class="full">
+        <span>What brings you? <em>(hay fever, asthma, allergies, other respiratory issue…)</em></span>
+        <textarea name="complaint" rows="4" required placeholder="A few sentences is plenty — we'll go into detail in the consultation."></textarea>
+      </label>
+
+      <label class="full">
+        <span>Anything else I should know?</span>
+        <textarea name="notes" rows="2" placeholder="Optional — current medications, past treatments, accessibility needs…"></textarea>
+      </label>
+
+      <label class="checkbox">
+        <input type="checkbox" name="consent" required />
+        <span>I understand homeopathy is complementary to, not a replacement for, orthodox medical care.</span>
+      </label>
+
+      <button type="submit" class="btn btn-primary">Request this appointment</button>
+      <p class="small italic">You won't be charged yet — I'll confirm the slot first.</p>
+    </form>
+
+    <div class="confirm hidden" id="confirm">
+      <h2>Thank you.</h2>
+      <p>Your request is in. Frances will confirm by email within one working day — usually much sooner.</p>
+      <p class="italic small">(This is a mockup — no data has actually been sent anywhere.)</p>
+    </div>
+  </div>
+</main>
+
+<footer class="site-foot">
+  <div class="foot-inner">
+    <div>
+      <p class="brand-name">Sneezes &amp; Wheezes</p>
+      <p class="small">Frances Emmy, RSHom · Henley-on-Thames</p>
+    </div>
+    <div>
+      <p class="small">hello@sneezesandwheezes.com</p>
+      <p class="small">01491 000 000</p>
+    </div>
+    <div>
+      <p class="small italic">"Everything the breath carries, the seasons remember."</p>
+    </div>
+  </div>
+  <p class="small credits">© 2026 Frances Emmy. Site mockup.</p>
+</footer>
+
+<script>
+function handleBooking(e) {
+  e.preventDefault();
+  document.querySelector('.booking-form').classList.add('hidden');
+  document.getElementById('confirm').classList.remove('hidden');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>

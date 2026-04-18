@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 200" role="img" aria-label="Cat and dog silhouette">
+  <defs>
+    <radialGradient id="wash-pets" cx="50%" cy="60%" r="65%">
+      <stop offset="0%" stop-color="#dfa5a5" stop-opacity="0.35"/>
+      <stop offset="60%" stop-color="#c2b1cf" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#c2b1cf" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- soft wash behind animals -->
+  <ellipse cx="210" cy="140" rx="200" ry="60" fill="url(#wash-pets)"/>
+
+  <!-- ground line (faint) -->
+  <path d="M 40 170 Q 210 178 380 170" stroke="#6a8a5f" stroke-opacity="0.35" stroke-width="1.2" fill="none"/>
+
+  <!-- Cat, sitting, facing right -->
+  <g transform="translate(150 168)" fill="#2b3a2a">
+    <!-- body -->
+    <path d="M 0 0
+             C -2 -20, -2 -38, 4 -48
+             L 2 -60 L 8 -54 L 12 -64 L 18 -58 L 22 -66 L 26 -58 L 30 -62 L 28 -52
+             C 32 -44, 34 -30, 32 -18
+             C 38 -14, 44 -8, 46 -2
+             L 46 2 L -14 2 Z"/>
+    <!-- tail curling round -->
+    <path d="M 42 -2 Q 58 -12, 58 -28 Q 52 -16, 44 -8 Z"/>
+    <!-- ears detail - small gap -->
+    <path d="M 8 -54 L 10 -58 L 14 -56 Z" fill="#1a2619"/>
+    <path d="M 22 -62 L 24 -64 L 26 -60 Z" fill="#1a2619"/>
+    <!-- eye glints -->
+    <circle cx="12" cy="-42" r="0.9" fill="#e0b07a"/>
+    <circle cx="20" cy="-42" r="0.9" fill="#e0b07a"/>
+    <!-- whisker hint -->
+    <line x1="14" y1="-36" x2="4" y2="-34" stroke="#1a2619" stroke-width="0.4"/>
+    <line x1="20" y1="-36" x2="30" y2="-34" stroke="#1a2619" stroke-width="0.4"/>
+  </g>
+
+  <!-- Dog, lying down, facing left -->
+  <g transform="translate(290 172)" fill="#2b3a2a">
+    <!-- body (reclined) -->
+    <path d="M 0 0
+             Q -40 -4, -70 -6
+             Q -80 -6, -82 -14
+             Q -78 -22, -70 -24
+             L -50 -26
+             Q -30 -28, -10 -24
+             Q 10 -20, 26 -18
+             Q 40 -18, 44 -14
+             L 46 -4
+             L 40 -2
+             L 36 -10
+             Q 20 -8, 8 -6
+             Q 4 -2, 0 0 Z"/>
+    <!-- head resting forward -->
+    <path d="M -82 -14
+             Q -96 -16, -104 -24
+             Q -110 -32, -108 -38
+             Q -104 -42, -98 -38
+             L -94 -32
+             Q -90 -28, -82 -22 Z"/>
+    <!-- ear floppy -->
+    <path d="M -100 -34 Q -108 -30, -110 -22 Q -104 -28, -96 -28 Z" fill="#1a2619"/>
+    <!-- eye -->
+    <circle cx="-96" cy="-30" r="0.9" fill="#e0b07a"/>
+    <!-- nose -->
+    <circle cx="-106" cy="-30" r="0.8" fill="#1a2619"/>
+    <!-- tail swishing up -->
+    <path d="M 44 -12 Q 58 -24, 56 -38 Q 50 -26, 42 -18 Z"/>
+  </g>
+</svg>
