@@ -770,3 +770,35 @@ p { margin: 0 0 1em 0; }
   .paradox { padding: 0 1.25rem 3rem; }
   .principles { padding: 3rem 1.25rem; }
 }
+.about-grid {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+.about-copy {
+    flex: 2;
+}
+
+.about-portrait {
+    flex: 1;
+    text-align: center;
+}
+
+.portrait-frame {
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .about-grid {
+        flex-direction: column;
+    }
+
+    .about-portrait {
+        order: -1;
+    }
+}
