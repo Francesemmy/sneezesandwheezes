@@ -34,7 +34,11 @@
     <h1>Let's make a start.</h1>
     <p class="lead">Initial consultations are <strong>75 minutes</strong> and cost <strong>£95</strong>. Follow-ups are 45 minutes at £65. Available in Henley (Thursdays &amp; Fridays) or over video. I'll confirm your slot by email within one working day.</p>
 
-    <form class="booking-form" onsubmit="handleBooking(event)">
+
+     <form
+  class="booking-form"
+  action="https://formspree.io/f/mrevkraj"
+  method="POST"> 
       <div class="row">
         <label>
           <span>Your name</span>
@@ -122,14 +126,7 @@
   <p class="small credits">© 2026 Frances Emmy. </p>
 </footer>
 
-<script>
-function handleBooking(e) {
-  e.preventDefault();
-  document.querySelector('.booking-form').classList.add('hidden');
-  document.getElementById('confirm').classList.remove('hidden');
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-</script>
+
 
 </body>
 </html>
